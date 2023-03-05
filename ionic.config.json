@@ -1,0 +1,7 @@
+{
+  "name": "tarea6_idam",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
