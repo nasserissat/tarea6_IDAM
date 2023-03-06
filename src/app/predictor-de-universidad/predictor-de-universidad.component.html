@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Predictor de universidades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Predictor de universidades</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="inicializador">
+      <div class="flex flex-col h-auto w-11/12">
+        <label class="title">Determine las universiades del país que quiera</label>
+          <input class="inputPP p-4" [(ngModel)]="country" placeholder="Ingrese un país">
+          <button class="button2" (click)="checkUni()"> {{ loading ? 'Cargando...' : 'Buscar' }}</button>
+      </div>
+      <div class="flex flex-col justify-start h-1/2 max-w-full mt-12 w-11/12">
+        <ul *ngIf="universities" class="h-auto overflow-y-scroll">
+          <li *ngFor="let university of universities">{{ university.name }}</li>
+        </ul>
+      </div>
+
+  
+  </div>
+</ion-content>

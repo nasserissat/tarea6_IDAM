@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Predictor de edad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Predictor de edad</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="centralizador">
+ 
+      <label class="title">Ingrese un nombre y determine su edad</label>
+      <input class="inputPP p-4" (keyup)="checkAge()" [(ngModel)]="name" placeholder="Ingrese un nombre">
+
+      <p class="text font-bold text-red-500" *ngIf="name && age">{{ name }} tiene {{ age }} años</p>
+      <div *ngIf="age != null && age >= 0 && age <= 3" class="flex flex-col w-24 items-center justify-center font-bold my-6 h-24 text-white"><img src="https://img.freepik.com/vector-gratis/lindo-bebe-durmiendo-ilustracion-icono-dibujos-animados-almohada-nube_138676-2812.jpg" alt="img de bebe">
+        <p class="text font-bold text-red-500">bebe</p>
+      </div>
+      <div *ngIf="age != null && age >= 4 && age <= 13" class="flex flex-col w-24 mt-12 items-center justify-center font-bold my-6 h-24 text-white"><img src="https://previews.123rf.com/images/blueringmedia/blueringmedia1511/blueringmedia151100159/48319782-ni%C3%B1a-y-ni%C3%B1o-ilustraci%C3%B3n-chat.jpg" alt="img de niño">
+        <p class="text font-bold text-red-500">niño</p>
+      </div>
+      <div *ngIf="age != null && age >= 14 && age <= 17" class="flex flex-col mt-12 w-24 items-center justify-center font-bold my-6 h-24 text-white"><img src="https://thumbs.dreamstime.com/z/ni%C3%B1o-cauc%C3%A1sico-preadolescente-charlando-con-su-novia-en-un-vector-de-dibujos-animados-celulares-muchacho-preadolescencia-celular-221032029.jpg" alt="img de adolecente">
+        <p class="text font-bold text-red-500">adolecente</p>
+      </div>
+        <div *ngIf="age != null && age >= 18 && age <= 30" class="flex mt-12 flex-col w-24 items-center justify-center font-bold my-6 h-24 text-white"> <img src="https://thumbs.dreamstime.com/b/ejemplo-lindo-de-la-historieta-de-la-gente-joven-66234482.jpg" alt="img de adulto joven">
+          <p class="text font-bold text-red-500">aulto joven</p>
+        </div>
+        <div *ngIf="age != null && age >= 31 && age <= 60" class="flex flex-col mt-12 w-24 items-center justify-center font-bold my-6 h-24 text-white"> <img src="https://img.freepik.com/vector-gratis/familia-negra-dibujada-mano-plana-ilustracion-bebe_23-2148853057.jpg?w=2000" alt="img de adulto maduro">
+          <p class="text font-bold text-red-500">adulto maduro</p>
+        </div>
+        <div *ngIf="age != null && age >= 61 && age <= 120" class="flex flex-col  mt-12 w-24 items-center justify-center font-bold my-6 h-24 text-white"> <img src="https://img.freepik.com/vector-gratis/personas-mayores-que-hacen-foto-selfie-ilustracion-historieta-anciano-mujer-sonriendo_33099-577.jpg" alt="img de persona mayor">
+          <p class="text font-bold text-red-500"> persona mayor</p>
+        </div>
+        </div>
+</ion-content>

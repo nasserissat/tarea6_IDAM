@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.centralizador{@apply flex flex-col h-full justify-center items-center}
+.inicializador{@apply flex flex-col h-full justify-start items-center mt-32 w-full}
+.inputPP{@apply bg-white border border-green-500 rounded-lg py-2 m-3 placeholder:pl-3}
+.title{@apply text-2xl text-center font-bold text-blue-600 text-center}
+.texto{@apply text-xl text-justify }
+.button2{@apply bg-green-500 hover:bg-green-600  px-4 py-2.5 rounded-full m-2 text-white font-medium cursor-pointer}
